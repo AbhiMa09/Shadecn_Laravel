@@ -152,34 +152,30 @@
     ];
 @endphp
 
-<!-- AppSidebar -->
+
 <aside class="group/sidebar peer hidden md:block" :data-state="state"
     :data-collapsible="state === 'collapsed' ? 'icon' : ''">
 
-    <!-- This container is in the flex flow, pushing the content area -->
     <div class="sticky top-0 h-svh w-80 flex flex-col bg-sidebar transition-[width] ease-linear duration-200 group-data-[collapsible=icon]/sidebar:w-12"
         data-sidebar="sidebar">
 
-        <!-- Sidebar Header -->
         <div class="flex flex-col" data-sidebar="header">
             <x-layout.sidebar.team-switcher :teams="$teams" />
         </div>
 
-        <!-- Sidebar Content -->
         <div class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto py-2 group-data-[collapsible=icon]/sidebar:overflow-hidden"
             data-sidebar="content">
             <x-layout.sidebar.nav-main :items="$navMainItems" />
             <x-layout.sidebar.nav-projects :projects="$navProjects" />
         </div>
 
-        <!-- Sidebar Footer -->
         <div class="flex flex-col mt-auto" data-sidebar="footer">
             <x-layout.sidebar.nav-user :user="$navUser" />
         </div>
     </div>
 </aside>
 
-<!-- Mobile Sidebar Sheet -->
+
 <div x-show="openMobile" class="fixed inset-0 z-50 bg-black/80 md:hidden" @click="openMobile = false"
     x-transition.opacity style="display: none;"></div>
 <div x-show="openMobile"

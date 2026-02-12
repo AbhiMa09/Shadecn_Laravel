@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Scripts -->
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -25,7 +25,7 @@
             --sidebar-width-icon: 3rem;
         }
 
-        /* Fix for broken sidebar collapse text issue */
+
         [data-collapsible="icon"] .group-data-\[collapsible\=icon\]\:hidden {
             display: none !important;
         }
@@ -34,7 +34,7 @@
             width: var(--sidebar-width-icon) !important;
         }
 
-        /* Hide scrollbar track but keep functionality */
+
         [data-sidebar="content"]::-webkit-scrollbar {
             width: 4px;
         }
@@ -57,7 +57,7 @@
 
 <body class="font-sans antialiased bg-background text-foreground min-h-screen">
 
-    <!-- SidebarProvider -->
+
     <div x-data="{
         state: localStorage.getItem('sidebar:state') || 'expanded',
         openMobile: false,
@@ -91,7 +91,7 @@
 
         @include('layouts.partials.sidebar')
 
-        <!-- SidebarInset -->
+
         <div class="flex flex-1 flex-col overflow-hidden bg-background transition-[width] ease-linear duration-200">
             @include('layouts.partials.nav')
 
