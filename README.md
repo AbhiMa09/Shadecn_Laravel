@@ -1,59 +1,112 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Shadecn Laravel UI
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern, responsive, and accessible UI component library for Laravel, inspired by [shadcn/ui](https://ui.shadcn.com/). Built with **Laravel Blade**, **Tailwind CSS**, and **Alpine.js**.
 
-## About Laravel
+This project provides a set of reusable Blade components that you can easy copy and paste into your own Laravel applications. It aims to bring the beautiful aesthetics and developer experience of the React/Vue ecosystem to the Laravel Blade world.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+*   **Laravel 12.x** ready
+*   **Vite** powered frontend tooling
+*   **Tailwind CSS** for styling
+*   **Alpine.js** for lightweight interactivity
+*   **Dark Mode** support out of the box
+*   **Responsive Sidebar** layout
+*   **Rich Component Library**:
+    *   Actions (Buttons, Dropdowns, Modals, Swaps)
+    *   Forms (Inputs, Selects, Toggles, Sliders)
+    *   Data Display (Cards, Tables, Avatars)
+    *   Navigation (Tabs, Breadcrumbs, Pagination)
+    *   And much more!
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Prerequisites
 
-## Learning Laravel
+Ensure you have the following installed on your local machine:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+*   **PHP** 8.2 or higher
+*   **Composer**
+*   **Node.js** & **NPM** (Version 20+ recommended)
+*   **MySQL**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 💻 Installation
 
-## Laravel Sponsors
+Follow these steps to set up the project locally:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/shadecn-laravel.git
+    cd shadecn-laravel
+    ```
 
-### Premium Partners
+2.  **Install PHP dependencies**
+    ```bash
+    composer install
+    ```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+3.  **Install Node dependencies**
+    ```bash
+    npm install
+    ```
 
-## Contributing
+4.  **Configure Environment**
+    Copy the example environment file and generate the application key:
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5.  **Database Setup**
+    Configure your database credentials in the `.env` file:
+    ```env
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=shadecn
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
+    Then run the migrations:
+    ```bash
+    php artisan migrate
+    ```
 
-## Code of Conduct
+## 🏃‍♂️ Running Locally
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+To start the development server, you will need to run two terminal commands in parallel:
 
-## Security Vulnerabilities
+1.  **Start the Vite development server** (for assets & hot reload):
+    ```bash
+    npm run dev
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2.  **Start the Laravel development server**:
+    ```bash
+    php artisan serve
+    ```
 
-## License
+Access the application at: [http://localhost:8000](http://localhost:8000)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🐳 Docker Support
+
+This project includes a Docker setup for easy containerization.
+
+1.  **Build and start the containers**:
+    ```bash
+    docker-compose up -d --build
+    ```
+
+2.  **Access the application**:
+    The application will be available at [http://localhost:8000](http://localhost:8000).
+
+3.  **Run commands inside the container**:
+    ```bash
+    docker-compose exec app php artisan migrate
+    ```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

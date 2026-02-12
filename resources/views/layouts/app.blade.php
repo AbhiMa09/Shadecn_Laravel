@@ -21,7 +21,7 @@
 
     <style>
         [data-sidebar="sidebar"] {
-            --sidebar-width: 16rem;
+            --sidebar-width: 18rem;
             --sidebar-width-icon: 3rem;
         }
 
@@ -87,7 +87,7 @@
         }
     }" :class="{ 
         'group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar': true 
-    }" style="--sidebar-width: 16rem; --sidebar-width-icon: 3rem;">
+    }" style="--sidebar-width: 18rem; --sidebar-width-icon: 3rem;">
 
         @include('layouts.partials.sidebar')
 
