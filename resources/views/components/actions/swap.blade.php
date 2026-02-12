@@ -3,10 +3,13 @@
 @section('content')
     <x-layout.component-showcase title="Swap"
         description="A component that allows you to swap between two states with a click, useful for toggle icons, state indicators, or interactive buttons."
-        componentPath="ui/swap.blade.php" usage='<x-ui.swap>
-        <x-slot name="off">OFF</x-slot>
-        <x-slot name="on">ON</x-slot>
-    </x-ui.swap>'>
+        componentPath="ui/swap.blade.php">
+        <x-slot:usageSlot>
+&lt;x-ui.swap&gt;
+    &lt;x-slot name="off"&gt;OFF&lt;/x-slot&gt;
+    &lt;x-slot name="on"&gt;ON&lt;/x-slot&gt;
+&lt;/x-ui.swap&gt;
+        </x-slot:usageSlot>
         <div class="flex flex-wrap items-center justify-center gap-12">
             <!-- Icon Swap -->
             <div class="flex flex-col items-center gap-2">

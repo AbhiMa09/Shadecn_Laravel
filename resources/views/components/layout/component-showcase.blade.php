@@ -3,6 +3,7 @@
     'description',
     'componentPath',
     'usage' => null,
+    'usageSlot' => null,
     'dependencies' => 'Tailwind CSS, Alpine.js',
 ])
 
@@ -45,10 +46,10 @@
                     </p>
                 </div>
 
-                @if($usage)
+                @if(isset($usage) || isset($usageSlot))
                     <div class="space-y-2 pt-4">
                         <h4 class="font-semibold text-sm underline">Usage</h4>
-                        <pre class="bg-muted p-3 rounded-md text-xs overflow-x-auto"><code>{{ $usage }}</code></pre>
+                        <pre class="bg-muted p-3 rounded-md text-xs overflow-x-auto"><code>{{ $usage ?? $usageSlot }}</code></pre>
                     </div>
                 @endif
             </div>

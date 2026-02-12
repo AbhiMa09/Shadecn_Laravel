@@ -3,7 +3,10 @@
 @section('content')
     <x-layout.component-showcase title="Carousel"
         description="A slideshow component for cycling through elements—images or slides of text—like a carousel."
-        componentPath="ui/carousel.blade.php" usage='<x-ui.carousel :slides="[...urls]" />'>
+        componentPath="ui/carousel.blade.php">
+        <x-slot:usageSlot>
+&lt;x-ui.carousel :slides="[...urls]" /&gt;
+        </x-slot:usageSlot>
         <div class="w-full max-w-xl">
             <x-ui.carousel :slides="[
             'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',

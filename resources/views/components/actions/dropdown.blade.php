@@ -3,16 +3,19 @@
 @section('content')
     <x-layout.component-showcase title="Dropdown Menu"
         description="Displays a menu to the user — such as a set of actions or functions — triggered by a button."
-        componentPath="ui/dropdown-menu" usage='<x-ui.dropdown-menu.index>
-        <x-ui.dropdown-menu.trigger>
-            <x-ui.button variant="outline">Open</x-ui.button>
-        </x-ui.dropdown-menu.trigger>
-        <x-ui.dropdown-menu.content>
-            <x-ui.dropdown-menu.label>Account</x-ui.dropdown-menu.label>
-            <x-ui.dropdown-menu.separator />
-            <x-ui.dropdown-menu.item>Profile</x-ui.dropdown-menu.item>
-        </x-ui.dropdown-menu.content>
-    </x-ui.dropdown-menu.index>'>
+        componentPath="ui/dropdown-menu">
+        <x-slot:usageSlot>
+&lt;x-ui.dropdown-menu.index&gt;
+    &lt;x-ui.dropdown-menu.trigger&gt;
+        &lt;x-ui.button variant="outline"&gt;Open&lt;/x-ui.button&gt;
+    &lt;/x-ui.dropdown-menu.trigger&gt;
+    &lt;x-ui.dropdown-menu.content&gt;
+        &lt;x-ui.dropdown-menu.label&gt;Account&lt;/x-ui.dropdown-menu.label&gt;
+        &lt;x-ui.dropdown-menu.separator /&gt;
+        &lt;x-ui.dropdown-menu.item&gt;Profile&lt;/x-ui.dropdown-menu.item&gt;
+    &lt;/x-ui.dropdown-menu.content&gt;
+&lt;/x-ui.dropdown-menu.index&gt;
+        </x-slot:usageSlot>
         <x-ui.dropdown-menu.index>
             <x-ui.dropdown-menu.trigger>
                 <x-ui.button variant="outline">

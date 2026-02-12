@@ -3,7 +3,10 @@
 @section('content')
     <x-layout.component-showcase title="Input"
         description="Displays a form input field or a component that looks like an input field."
-        componentPath="ui/input.blade.php" usage='<x-ui.input type="email" placeholder="Email" />'>
+        componentPath="ui/input.blade.php">
+        <x-slot:usageSlot>
+&lt;x-ui.input type="email" placeholder="Email" /&gt;
+        </x-slot:usageSlot>
         <div class="w-full max-w-sm space-y-6">
             <div class="space-y-2">
                 <x-ui.label for="email-demo">Email</x-ui.label>
