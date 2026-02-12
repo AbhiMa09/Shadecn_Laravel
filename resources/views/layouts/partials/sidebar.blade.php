@@ -17,6 +17,7 @@
     $navMainItems = [
         [
             'title' => 'Platform',
+            'icon' => 'icons.terminal',
             'items' => [
                 ['title' => 'Dashboard', 'url' => route('dashboard'), 'icon' => 'icons.dashboard'],
                 ['title' => 'Users', 'url' => route('users'), 'icon' => 'icons.users'],
@@ -156,7 +157,7 @@
     :data-collapsible="state === 'collapsed' ? 'icon' : ''">
 
     <!-- This container is in the flex flow, pushing the content area -->
-    <div class="sticky top-0 h-svh w-[--sidebar-width] flex flex-col bg-sidebar transition-[width] ease-linear duration-200 group-data-[collapsible=icon]/sidebar:w-[--sidebar-width-icon]"
+    <div class="sticky top-0 h-svh w-80 flex flex-col bg-sidebar transition-[width] ease-linear duration-200 group-data-[collapsible=icon]/sidebar:w-12"
         data-sidebar="sidebar">
 
         <!-- Sidebar Header -->
